@@ -7,4 +7,4 @@ Here are the config files that I've been maintaining so far &mdash; `.vimrc`, `.
 
 ## Syncing
 
-Just run `./copy.sh` in your terminal (for Linux and macOS users) to update this repo.
+Just run `./copy.sh` in your terminal (for Linux and macOS users) to update the configs in this repo.
