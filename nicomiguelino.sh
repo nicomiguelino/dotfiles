@@ -45,6 +45,16 @@ alias grebase="git pull --rebase"
 export GIT_SSL_NO_VERIFY=1
 
 
+# Docker
+
+alias dk="docker"
+
+alias di="dk image"
+alias dc="dk ps"
+alias dv="dk volume"
+alias dn="dk network"
+
+
 # Sublime Text 3 (Hack-ish)
 
 alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"

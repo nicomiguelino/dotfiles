@@ -35,6 +35,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattesgroeger/vim-bookmarks'
+Plug 'tylerbrazier/vim-bracepair'
 
 call plug#end()
 
