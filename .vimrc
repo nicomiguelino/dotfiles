@@ -5,6 +5,7 @@
 set number
 set relativenumber
 set hlsearch
+set hidden
 set incsearch 
 set novisualbell
 set ignorecase
@@ -25,7 +26,7 @@ set smarttab
 
 """"""""""""""""""""""""""
 " Vim Plugins (vim-plug) "
-""""""""""""""""""""""""""
+    """"""""""""""""""""""""""
 
 call plug#begin('~/.vim/autoload')
 
