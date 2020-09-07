@@ -36,6 +36,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattesgroeger/vim-bookmarks'
 Plug 'tylerbrazier/vim-bracepair'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -50,8 +51,14 @@ set background=dark
 
 let g:airline_theme='simple'
 
+
 " junegunn/fzf
 
 nnoremap <C-p> :FZF<CR>
+
+
+" scrooloose/nerdtree
+
+nmap <C-n> :NERDTreeToggle<CR>
 
 
