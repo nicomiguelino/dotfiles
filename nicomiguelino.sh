@@ -49,10 +49,11 @@ export GIT_SSL_NO_VERIFY=1
 
 alias dk="docker"
 
-alias di="dk image"
 alias dc="dk ps"
-alias dv="dk volume"
+alias de="dk exec"
+alias di="dk image"
 alias dn="dk network"
+alias dv="dk volume"
 
 
 # Sublime Text 3 (Hack-ish)
