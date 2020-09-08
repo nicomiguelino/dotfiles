@@ -22,11 +22,14 @@ set autoindent
 set copyindent
 set smarttab
 
+autocmd Filetype python set colorcolumn=79
+autocmd Filetype htmldjango set colorcolumn=100
+
 
 
 """"""""""""""""""""""""""
 " Vim Plugins (vim-plug) "
-    """"""""""""""""""""""""""
+""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/autoload')
 
@@ -36,8 +39,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattesgroeger/vim-bookmarks'
-Plug 'tylerbrazier/vim-bracepair'
+Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 

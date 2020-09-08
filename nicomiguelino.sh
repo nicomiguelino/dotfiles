@@ -28,6 +28,11 @@ alias grep="grep --color=auto \
 	--exclude-dir node_modules"
 
 
+# Permissions and Ownership Management
+
+alias urechown="sudo chown -R $USER:$USER ."
+
+
 # Git
 
 alias ga="git add"
