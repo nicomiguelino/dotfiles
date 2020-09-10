@@ -2,7 +2,6 @@
 " General "
 """""""""""
 
-set number
 set relativenumber
 set hlsearch
 set hidden
@@ -27,7 +26,16 @@ autocmd Filetype htmldjango set colorcolumn=100
 
 
 
-""""""""""""""""""""""""""
+""""""""""""""
+" Formatting "
+""""""""""""""
+
+" Trim trailing whitespaces on save
+autocmd BufWritePre * %s/\s\+$//e
+
+
+
+"""""""""""""""""""""""""
 " Vim Plugins (vim-plug) "
 """"""""""""""""""""""""""
 

@@ -22,8 +22,10 @@ alias cd_gh="cd $GITHUB_CODE_DIR"
 
 
 # Code Search
+# TODO NICO: You could use ripgrep (rg) as an alternative to grep.
 
 alias grep="grep --color=auto \
+	--exclude '*.swp' \
 	--exclude-dir .git \
 	--exclude-dir node_modules"
 
