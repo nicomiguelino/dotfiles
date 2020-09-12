@@ -5,9 +5,10 @@
 set relativenumber
 set hlsearch
 set hidden
-set incsearch 
+set incsearch
 set novisualbell
 set ignorecase
+set noswapfile
 
 set mouse=a
 
