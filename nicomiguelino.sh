@@ -3,22 +3,36 @@
 alias cls="clear"
 
 
+
 # Personal
 
 CODE_DIR=$HOME/Code
+
 DOCKER_CODE_DIR=$CODE_DIR/Docker
-PYTHON_CODE_DIR=$CODE_DIR/Python
+
 GITLAB_CODE_DIR=$CODE_DIR/GitLab
 GITHUB_CODE_DIR=$CODE_DIR/GitHub
+
+PYTHON_CODE_DIR=$CODE_DIR/Python
 DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
+
+JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
+REACT_DIR=$JAVASCRIPT_CODE_DIR/React
+
 
 alias cd_code="cd $CODE_DIR"
 
 alias cd_dk="cd $DOCKER_CODE_DIR"
-alias cd_py="cd $PYTHON_CODE_DIR"
-alias cd_dj="cd $DJANGO_CODE_DIR"
+
 alias cd_gl="cd $GITLAB_CODE_DIR"
 alias cd_gh="cd $GITHUB_CODE_DIR"
+
+alias cd_py="cd $PYTHON_CODE_DIR"
+alias cd_dj="cd $DJANGO_CODE_DIR"
+
+alias cd_js="cd $JAVASCRIPT_CODE_DIR"
+alias cd_react="cd $REACT_DIR"
+
 
 
 # Code Search
@@ -30,9 +44,11 @@ alias grep="grep --color=auto \
 	--exclude-dir node_modules"
 
 
+
 # Permissions and Ownership Management
 
 alias urechown="sudo chown -R $USER:$USER ."
+
 
 
 # Git
@@ -52,6 +68,7 @@ alias grebase="git pull --rebase"
 export GIT_SSL_NO_VERIFY=1
 
 
+
 # Docker
 
 alias dk="docker"
@@ -63,15 +80,18 @@ alias dn="dk network"
 alias dv="dk volume"
 
 
+
 # Sublime Text 3 (Hack-ish)
 
 alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"
+
 
 
 # Prompt String
 # For bash only; ohmyzsh goes meh
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+
 
 
 # WSL 2

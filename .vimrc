@@ -2,6 +2,7 @@
 " General "
 """""""""""
 
+set number
 set relativenumber
 set hlsearch
 set hidden
@@ -36,13 +37,21 @@ autocmd BufWritePre * %s/\s\+$//e
 
 
 
+""""""""""""""
+" Background "
+""""""""""""""
+
+set background=dark
+
+
+
 """""""""""""""""""""""""
 " Vim Plugins (vim-plug) "
 """"""""""""""""""""""""""
 
 call plug#begin('~/.vim/autoload')
 
-Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -55,12 +64,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 
 call plug#end()
-
-
-" morhetz/gruvbox
-
-autocmd vimenter * colorscheme gruvbox
-set background=dark
 
 
 " vim-airline
@@ -76,5 +79,9 @@ nnoremap <C-p> :FZF<CR>
 " scrooloose/nerdtree
 
 nmap <C-n> :NERDTreeToggle<CR>
+autocmd Filetype nerdtree set number relativenumber
 
+
+" crusoexia/vim-monokai
+autocmd vimenter * colorscheme monokai
 
