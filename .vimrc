@@ -11,8 +11,6 @@ set novisualbell
 set ignorecase
 set noswapfile
 
-set mouse=a
-
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -62,18 +60,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
 
-" vim-airline
-
-let g:airline_theme='simple'
-
-
 " junegunn/fzf
 
-nnoremap <C-p> :FZF<CR>
+nnoremap <space><space> :FZF<CR>
 
 
 " scrooloose/nerdtree
@@ -82,6 +76,15 @@ nmap <C-n> :NERDTreeToggle<CR>
 autocmd Filetype nerdtree set number relativenumber
 
 
-" crusoexia/vim-monokai
+" colorscheme
 autocmd vimenter * colorscheme monokai
+
+
+" vim-airline
+
+let g:airline_theme='jellybeans'
+let g:airline_powerline_fonts = 1
+
+autocmd vimenter * :AirlineTheme jellybeans
+
 

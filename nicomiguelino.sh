@@ -19,6 +19,8 @@ DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
 JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
 REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 
+CSS_DIR=$CODE_DIR/CSS
+
 
 alias cd_code="cd $CODE_DIR"
 
@@ -32,6 +34,8 @@ alias cd_dj="cd $DJANGO_CODE_DIR"
 
 alias cd_js="cd $JAVASCRIPT_CODE_DIR"
 alias cd_react="cd $REACT_DIR"
+
+alias cd_css="cd $CSS_DIR"
 
 
 
