@@ -4,7 +4,7 @@ config_files=(
     $HOME/.tmux.conf
     $HOME/.vimrc
     $HOME/.config/nvim/init.vim
-    $HOME/nicomiguelino.sh
+    $HOME/.commonrc.d
 )
 
-cp ${config_files[@]} .
+cp -r ${config_files[@]} .

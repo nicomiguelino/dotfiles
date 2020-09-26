@@ -9,8 +9,6 @@ alias cls="clear"
 CODE_DIR=$HOME/Code
 
 DOCKER_CODE_DIR=$CODE_DIR/Docker
-
-GITLAB_CODE_DIR=$CODE_DIR/GitLab
 GITHUB_CODE_DIR=$CODE_DIR/GitHub
 
 PYTHON_CODE_DIR=$CODE_DIR/Python
@@ -19,14 +17,13 @@ DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
 JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
 REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 
-CSS_DIR=$CODE_DIR/CSS
+ASTI_CODE_DIR=$CODE_DIR/ASTI-CSD
 
 
 alias cd_code="cd $CODE_DIR"
 
 alias cd_dk="cd $DOCKER_CODE_DIR"
 
-alias cd_gl="cd $GITLAB_CODE_DIR"
 alias cd_gh="cd $GITHUB_CODE_DIR"
 
 alias cd_py="cd $PYTHON_CODE_DIR"
@@ -35,7 +32,7 @@ alias cd_dj="cd $DJANGO_CODE_DIR"
 alias cd_js="cd $JAVASCRIPT_CODE_DIR"
 alias cd_react="cd $REACT_DIR"
 
-alias cd_css="cd $CSS_DIR"
+alias cd_csd="cd $ASTI_CODE_DIR"
 
 
 
