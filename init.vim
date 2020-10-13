@@ -23,6 +23,7 @@ set smarttab
 
 autocmd Filetype python set colorcolumn=79
 autocmd Filetype htmldjango set colorcolumn=100
+autocmd Filetype html set colorcolumn=100
 
 
 
@@ -50,16 +51,29 @@ set background=dark
 
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'crusoexia/vim-monokai'
+" Aesthetics
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'crusoexia/vim-monokai'
+
+" File Management
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mattesgroeger/vim-bookmarks'
-Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
-Plug 'mattn/emmet-vim'
+
+" Code Readability
+
+Plug 'mattesgroeger/vim-bookmarks'
+Plug 'tmhedberg/simpylfold'
 Plug 'sheerun/vim-polyglot'
+
+" Code Formatting
+
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 
@@ -73,19 +87,21 @@ nnoremap <space><space> :FZF<CR>
 
 " scrooloose/nerdtree
 
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR><C-w>=
 autocmd Filetype nerdtree set number relativenumber
 
 
 " colorscheme
+
 autocmd vimenter * colorscheme monokai
 
 
 " vim-airline
 
-let g:airline_theme='jellybeans'
 let g:airline_powerline_fonts = 1
+autocmd vimenter * :AirlineTheme simple
 
-autocmd vimenter * :AirlineTheme jellybeans
 
+" tmhedberg/simpylfold
 
+set nofoldenable
