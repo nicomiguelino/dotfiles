@@ -2,8 +2,6 @@
 " General "
 """""""""""
 
-set mouse=a
-
 set number
 set relativenumber
 set hlsearch
@@ -25,9 +23,9 @@ set smarttab
 
 set guicursor=n-v-c-sm:block,i-ci-ve:block,r-cr-o:block
 
-autocmd Filetype python set colorcolumn=79
-autocmd Filetype htmldjango set colorcolumn=100
-autocmd Filetype html set colorcolumn=100
+autocmd Filetype python setlocal colorcolumn=79
+autocmd Filetype htmldjango setlocal colorcolumn=100
+autocmd Filetype html setlocal colorcolumn=100
 
 
 
@@ -75,6 +73,20 @@ nnoremap <leader>hn :nohlsearch<CR>
 autocmd BufWritePre * %s/\s\+$//e
 
 
+"""""""""""
+" Folding "
+"""""""""""
+
+set nofoldenable
+set foldlevel=99
+
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+    au InsertLeave *.js normal zx
+augroup END
+
+
 
 """"""""""""""
 " Background "
@@ -110,12 +122,17 @@ Plug 'mattesgroeger/vim-bookmarks'
 Plug 'tmhedberg/simpylfold'
 Plug 'sheerun/vim-polyglot'
 
-" Code Formatting
+" Code Formatting and Editing
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" API Testins
+
+Plug 'nicwest/vim-http'
 
 call plug#end()
 
@@ -127,21 +144,25 @@ nnoremap <space><space> :FZF<CR>
 
 " scrooloose/nerdtree
 
-nmap <C-n> :NERDTreeToggle<CR><C-w>=
+nmap <leader>n :NERDTreeToggle<CR><C-w>=
 autocmd Filetype nerdtree set number relativenumber
+
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 
 
 " colorscheme
 
-autocmd vimenter * colorscheme monokai
+colorscheme sonokai
 
 
 " vim-airline
 
 let g:airline_powerline_fonts = 1
 autocmd vimenter * :AirlineTheme kolor
+let g:airline_theme='kolor'
 
 
-" tmhedberg/simpylfold
+" nicwest/vim-http
 
-set nofoldenable
+let g:vim_http_split_vertically=1
