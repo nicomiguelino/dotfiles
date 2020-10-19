@@ -78,21 +78,22 @@ autocmd BufWritePre * %s/\s\+$//e
 """""""""""
 
 set nofoldenable
+set foldmethod=syntax
 set foldlevel=99
 
-augroup javascript_folding
+augroup generic_folding
     au!
-    au FileType javascript setlocal foldmethod=syntax
-    au InsertLeave *.js normal zx
+    au InsertLeave * normal zx
 augroup END
 
 
 
 """"""""""""""
-" Background "
+" Aesthetics "
 """"""""""""""
 
 set background=dark
+set fillchars+=vert:\|,fold:\-
 
 
 
@@ -153,7 +154,7 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " colorscheme
 
-colorscheme sonokai
+colorscheme gruvbox
 
 
 " vim-airline
