@@ -2,6 +2,8 @@
 " General "
 """""""""""
 
+set mouse=a
+
 set number
 set relativenumber
 set hlsearch
@@ -26,6 +28,7 @@ set guicursor=n-v-c-sm:block,i-ci-ve:block,r-cr-o:block
 autocmd Filetype python setlocal colorcolumn=79
 autocmd Filetype htmldjango setlocal colorcolumn=100
 autocmd Filetype html setlocal colorcolumn=100
+autocmd Filetype javascript setlocal colorcolumn=80
 
 
 
@@ -40,28 +43,20 @@ nnoremap <SPACE> <Nop>
 let mapleader = " "
 
 " Window Movements
+" - Uses <SPACE>w instead of <C-w>
 
-nnoremap <leader>wc <C-w>c
-nnoremap <leader>wr <C-w>r
-nnoremap <leader>ws <C-w>s
-nnoremap <leader>wv <C-w>v
-nnoremap <leader>ww <C-w>w
-
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wl <C-w>l
+nnoremap <Leader>w <C-w>
 
 " Tab Movements
 
-nnoremap <leader>to :tabnew<CR>
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>tn gt
-nnoremap <leader>tp gT
+nnoremap <Leader>to :tabnew<CR>
+nnoremap <Leader>tc :tabclose<CR>
+nnoremap <Leader>tn gt
+nnoremap <Leader>tp gT
 
 " Test Search Highlighting
 
-nnoremap <leader>hn :nohlsearch<CR>
+nnoremap <Leader>hn :nohlsearch<CR>
 
 
 
@@ -80,6 +75,8 @@ autocmd BufWritePre * %s/\s\+$//e
 set nofoldenable
 set foldmethod=syntax
 set foldlevel=99
+
+autocmd Filetype htmldjango setlocal foldmethod=manual
 
 augroup generic_folding
     au!
@@ -110,6 +107,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'crusoexia/vim-monokai'
+Plug 'sainnhe/gruvbox-material'
+Plug 'phanviet/vim-monokai-pro'
 
 " File Management
 
@@ -122,6 +121,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'mattesgroeger/vim-bookmarks'
 Plug 'tmhedberg/simpylfold'
 Plug 'sheerun/vim-polyglot'
+Plug 'chrisbra/colorizer'
 
 " Code Formatting and Editing
 
@@ -154,7 +154,8 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " colorscheme
 
-colorscheme gruvbox
+colorscheme monokai
+let g:VM_theme = 'spacegray'
 
 
 " vim-airline
@@ -167,3 +168,8 @@ let g:airline_theme='kolor'
 " nicwest/vim-http
 
 let g:vim_http_split_vertically=1
+
+
+" mattn/emmet-vim
+
+let g:user_emmet_leader_key='<C-h>'
