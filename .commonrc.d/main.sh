@@ -19,6 +19,10 @@ REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
 
 ASTI_CODE_DIR=$CODE_DIR/ASTI-CSD
+GITLAB_CODE_DIR=$ASTI_CODE_DIR/gitlab
+GITLAB_USERNAME=nicobrent
+GULAI_WEB_DIR=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web
+GULAI_DJANGO_DIR=$GULAI_WEB_DIR/gulai-django
 
 
 alias cd_code="cd $CODE_DIR"
@@ -35,6 +39,8 @@ alias cd_react="cd $REACT_DIR"
 alias cd_redux="cd $REDUX_DIR"
 
 alias cd_csd="cd $ASTI_CODE_DIR"
+alias cd_gl="cd $GITLAB_CODE_DIR"
+alias cd_gd="cd $GULAI_DJANGO_DIR"
 
 
 
