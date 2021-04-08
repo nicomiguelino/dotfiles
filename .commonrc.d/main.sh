@@ -15,6 +15,7 @@ PYTHON_CODE_DIR=$CODE_DIR/Python
 DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
 
 JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
+JAVA_CODE_DIR=$CODE_DIR/Java
 REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
 
@@ -23,6 +24,7 @@ GITLAB_CODE_DIR=$ASTI_CODE_DIR/gitlab
 GITLAB_USERNAME=nicobrent
 GULAI_WEB_DIR=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web
 GULAI_DJANGO_DIR=$GULAI_WEB_DIR/gulai-django
+GWT_TOOLS=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web-tools
 
 
 alias cd_code="cd $CODE_DIR"
@@ -35,12 +37,14 @@ alias cd_py="cd $PYTHON_CODE_DIR"
 alias cd_dj="cd $DJANGO_CODE_DIR"
 
 alias cd_js="cd $JAVASCRIPT_CODE_DIR"
+alias cd_java="cd $JAVA_CODE_DIR"
 alias cd_react="cd $REACT_DIR"
 alias cd_redux="cd $REDUX_DIR"
 
 alias cd_csd="cd $ASTI_CODE_DIR"
 alias cd_gl="cd $GITLAB_CODE_DIR"
 alias cd_gd="cd $GULAI_DJANGO_DIR"
+alias cd_gwt="cd $GWT_TOOLS"
 
 
 
@@ -85,7 +89,8 @@ fi
 alias grep="grep --color=auto \
 	--exclude '*.swp' \
 	--exclude-dir .git \
-	--exclude-dir node_modules"
+	--exclude-dir node_modules \
+	--exclude-dir __pycache__"
 
 
 

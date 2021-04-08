@@ -54,6 +54,9 @@ nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>tn gt
 nnoremap <Leader>tp gT
 
+" Buffer Movements
+nnoremap <Leader>bd :bd<CR>
+
 " Test Search Highlighting
 
 nnoremap <Leader>hn :nohlsearch<CR>
@@ -91,6 +94,9 @@ augroup END
 
 set background=dark
 set fillchars+=vert:\|,fold:\-
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
 
@@ -161,8 +167,8 @@ let g:VM_theme = 'spacegray'
 " vim-airline
 
 let g:airline_powerline_fonts = 1
-autocmd vimenter * :AirlineTheme kolor
-let g:airline_theme='kolor'
+autocmd vimenter * :AirlineTheme fruit_punch
+let g:airline_theme='fruit_punch'
 
 
 " nicwest/vim-http
