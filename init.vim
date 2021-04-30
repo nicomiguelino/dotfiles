@@ -167,8 +167,8 @@ let g:VM_theme = 'spacegray'
 " vim-airline
 
 let g:airline_powerline_fonts = 1
-autocmd vimenter * :AirlineTheme fruit_punch
-let g:airline_theme='fruit_punch'
+autocmd vimenter * :AirlineTheme simple
+let g:airline_theme='simple'
 
 
 " nicwest/vim-http

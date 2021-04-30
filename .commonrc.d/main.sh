@@ -16,6 +16,7 @@ DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
 
 JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
 JAVA_CODE_DIR=$CODE_DIR/Java
+ELIXIR_CODE_DIR=$CODE_DIR/Elixir
 REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
 
@@ -38,6 +39,7 @@ alias cd_dj="cd $DJANGO_CODE_DIR"
 
 alias cd_js="cd $JAVASCRIPT_CODE_DIR"
 alias cd_java="cd $JAVA_CODE_DIR"
+alias cd_ex="cd $ELIXIR_CODE_DIR"
 alias cd_react="cd $REACT_DIR"
 alias cd_redux="cd $REDUX_DIR"
 
