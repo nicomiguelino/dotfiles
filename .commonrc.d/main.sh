@@ -17,8 +17,10 @@ DJANGO_CODE_DIR=$PYTHON_CODE_DIR/Django
 JAVASCRIPT_CODE_DIR=$CODE_DIR/JavaScript
 JAVA_CODE_DIR=$CODE_DIR/Java
 ELIXIR_CODE_DIR=$CODE_DIR/Elixir
+R_CODE_DIR=$CODE_DIR/R
 REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
+NODE_DIR=$JAVASCRIPT_CODE_DIR/Node
 
 ASTI_CODE_DIR=$CODE_DIR/ASTI-CSD
 GITLAB_CODE_DIR=$ASTI_CODE_DIR/gitlab
@@ -40,8 +42,10 @@ alias cd_dj="cd $DJANGO_CODE_DIR"
 alias cd_js="cd $JAVASCRIPT_CODE_DIR"
 alias cd_java="cd $JAVA_CODE_DIR"
 alias cd_ex="cd $ELIXIR_CODE_DIR"
+alias cd_r="$R_CODE_DIR"
 alias cd_react="cd $REACT_DIR"
 alias cd_redux="cd $REDUX_DIR"
+alias cd_node="cd $NODE_DIR"
 
 alias cd_csd="cd $ASTI_CODE_DIR"
 alias cd_gl="cd $GITLAB_CODE_DIR"
@@ -66,22 +70,24 @@ export PATH=$PATH:$EMACS_DIR/bin
 
 # Reference: https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html
 
-if [ -s "$HOME/.nvm/nvm.sh" ]; then
-    export NVM_DIR="$HOME/.nvm"
+# if [ -s "$HOME/.nvm/nvm.sh" ]; then
+#     export NVM_DIR="$HOME/.nvm"
 
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+#     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-    declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
+#     declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
 
-    function __init_nvm() {
-      for i in "${__node_commands[@]}"; do unalias $i; done
-      . "$NVM_DIR"/nvm.sh
-      unset __node_commands
-      unset -f __init_nvm
-    }
+#     function __init_nvm() {
+#       for i in "${__node_commands[@]}"; do unalias $i; done
+#       . "$NVM_DIR"/nvm.sh
+#       unset __node_commands
+#       unset -f __init_nvm
+#     }
 
-    for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
-fi
+#     for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+# fi
+
+source $HOME/.nvm/nvm.sh
 
 
 
@@ -134,7 +140,7 @@ alias dv="dk volume"
 
 # Sublime Text 3 (Hack-ish)
 
-alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"
+alias subl="/mnt/c/Program\ Files/Sublime\ Text/subl.exe"
 
 
 
@@ -142,6 +148,12 @@ alias subl="/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe"
 # For bash only; ohmyzsh goes meh
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+
+
+
+# MongoDB
+
+alias start_mongo="sudo mongod --dbpath ~/data/db"
 
 
 
