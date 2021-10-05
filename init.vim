@@ -2,7 +2,7 @@
 " General "
 """""""""""
 
-set mouse=a
+" set mouse=a
 
 set number
 set relativenumber
