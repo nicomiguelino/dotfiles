@@ -58,7 +58,7 @@ alias cd_gwt="cd $GWT_TOOLS"
 
 EMACS_DIR=$HOME/.emacs.d
 
-export PATH=$PATH:$EMACS_DIR/bin
+export PATH=$PATH:$EMACS_DIR/bin:$HOME/.local/bin
 
 
 
