@@ -22,10 +22,10 @@ REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
 NODE_DIR=$JAVASCRIPT_CODE_DIR/Node
 
-ASTI_CODE_DIR=$CODE_DIR/ASTI-CSD
-GITLAB_CODE_DIR=$ASTI_CODE_DIR/gitlab
+ASTI_CODE_DIR=$CODE_DIR/ASTI/CSD
+GITLAB_CODE_DIR=$ASTI_CODE_DIR/GitLab
 GITLAB_USERNAME=nicobrent
-GULAI_WEB_DIR=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web
+GULAI_WEB_DIR=$GITLAB_CODE_DIR/gulai-web-developers/gulai-web
 GULAI_DJANGO_DIR=$GULAI_WEB_DIR/gulai-django
 GWT_TOOLS=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web-tools
 
@@ -70,24 +70,25 @@ export PATH=$PATH:$EMACS_DIR/bin:$HOME/.local/bin
 
 # Reference: https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html
 
-# if [ -s "$HOME/.nvm/nvm.sh" ]; then
-#     export NVM_DIR="$HOME/.nvm"
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
+    export NVM_DIR="$HOME/.nvm"
 
-#     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-#     declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
+    declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
 
-#     function __init_nvm() {
-#       for i in "${__node_commands[@]}"; do unalias $i; done
-#       . "$NVM_DIR"/nvm.sh
-#       unset __node_commands
-#       unset -f __init_nvm
-#     }
+    function __init_nvm() {
+      for i in "${__node_commands[@]}"; do unalias $i; done
+      . "$NVM_DIR"/nvm.sh
+      unset __node_commands
+      unset -f __init_nvm
+    }
 
-#     for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
-# fi
+    for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+fi
 
-source $HOME/.nvm/nvm.sh
+# You could uncomment the line below if you want to load node binaries on startup.
+# source $HOME/.nvm/nvm.sh
 
 
 
@@ -147,7 +148,7 @@ alias subl="/mnt/c/Program\ Files/Sublime\ Text/subl.exe"
 # Prompt String
 # For bash only; ohmyzsh goes meh
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+# PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 
 
@@ -168,3 +169,8 @@ alias start_mongo="sudo mongod --dbpath ~/data/db"
 alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' \
 	&& swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
 
+
+
+# FZF Configs
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
