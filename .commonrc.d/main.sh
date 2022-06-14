@@ -22,10 +22,10 @@ REACT_DIR=$JAVASCRIPT_CODE_DIR/React
 REDUX_DIR=$JAVASCRIPT_CODE_DIR/Redux
 NODE_DIR=$JAVASCRIPT_CODE_DIR/Node
 
-ASTI_CODE_DIR=$CODE_DIR/ASTI/CSD
-GITLAB_CODE_DIR=$ASTI_CODE_DIR/GitLab
+ASTI_CODE_DIR=$CODE_DIR/ASTI-CSD
+GITLAB_CODE_DIR=$ASTI_CODE_DIR/gitlab
 GITLAB_USERNAME=nicobrent
-GULAI_WEB_DIR=$GITLAB_CODE_DIR/gulai-web-developers/gulai-web
+GULAI_WEB_DIR=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web
 GULAI_DJANGO_DIR=$GULAI_WEB_DIR/gulai-django
 GWT_TOOLS=$GITLAB_CODE_DIR/$GITLAB_USERNAME/gulai-web-tools
 
@@ -87,7 +87,6 @@ if [ -s "$HOME/.nvm/nvm.sh" ]; then
     for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
 
-# You could uncomment the line below if you want to load node binaries on startup.
 # source $HOME/.nvm/nvm.sh
 
 
@@ -148,13 +147,18 @@ alias subl="/mnt/c/Program\ Files/Sublime\ Text/subl.exe"
 # Prompt String
 # For bash only; ohmyzsh goes meh
 
-# PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 
 
 # MongoDB
 
 alias start_mongo="sudo mongod --dbpath ~/data/db"
+
+
+# rbenv for Ruby
+
+eval "$(rbenv init -)"
 
 
 
@@ -169,8 +173,3 @@ alias start_mongo="sudo mongod --dbpath ~/data/db"
 alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' \
 	&& swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
 
-
-
-# FZF Configs
-
-export FZF_DEFAULT_COMMAND="rg --files --hidden"
