@@ -30,6 +30,7 @@ autocmd Filetype python setlocal colorcolumn=79
 autocmd Filetype htmldjango setlocal colorcolumn=100
 autocmd Filetype html setlocal colorcolumn=100
 autocmd Filetype javascript setlocal colorcolumn=80
+autocmd Filetype ruby setlocal colorcolumn=80
 
 
 
